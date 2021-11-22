@@ -1,31 +1,165 @@
+/*style de toute la section du body*/
 #page {
     display: grid;
     width: 100%;
-    height: 700px;
+    height: 710px;
     grid-template-areas: "nav head"
                          "nav  main"
                          "nav  foot";
     grid-template-rows: 50px 1fr 30px;
     grid-template-columns: 150px 1fr;
+    font-family: 'Comfortaa', cursive;
   }
   
+  /*tête de la page : type du plat & horloge*/
   #page > header {
     grid-area: head;
     background-color: #8ca0ff;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  /*horloge*/
+  .clock {
+    background: #97007e;
+    width: 110px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
   }
   
+  .clock-time, .clock-ampm {
+    font-size: 20px;
+    color: pink;
+  }
+  
+  .clock-time {
+    font-size: 30px;
+  }
+  
+
+  /*partie de gauche : menu*/
   #page > nav {
     grid-area: nav;
     background-color: #ffa08c;
+    font-weight: 400;
+    font-size: 20px;
   }
-  
+
+  /*menu vers d'autres pages*/
+    #menu-accordeon {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: center;
+    width: 100%;
+    }
+
+    #menu-accordeon ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: center;
+    }
+
+    #menu-accordeon li {
+     background-color:#729EBF;
+    }
+
+    #menu-accordeon li li {
+     max-height:0;
+     overflow: hidden;
+     transition: all .5s;
+     border-radius:0;
+     background: #444;
+     box-shadow: none;
+     border:none;
+     margin:0
+    }
+
+    #menu-accordeon a {
+    display:block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 0;
+    font-size:1.2em
+    }
+
+    #menu-accordeon ul li a, #menu-accordeon li:hover li a {
+    font-size:1em
+    }
+
+    #menu-accordeon li:hover {
+     background: #729EBF
+    }
+
+    #menu-accordeon li li:hover {
+     background: #999;
+    }
+
+    #menu-accordeon ul li:last-child {
+     border-radius: 0 0 6px 6px;
+     border:none;
+    }
+    
+    #menu-accordeon li:hover li {
+    max-height: 15em;
+    }
+
+  /*page d'accueil : plat & en savoir plus*/
   #page > main {
     grid-area: main;
     background-color: #ffff64;
+    font-weight: 700;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes identifier {
+    0% { transform: rotate(10deg); }
+    33% { transform: rotate(-10deg); }
+    66% { transform: rotate(10deg); }
   }
   
+  main:hover .repas {
+    animation: identifier 2000ms;
+  }
+
+
+  /*bouton vers la page 2*/
+  .more {
+    background-color: #333;
+  }
+  
+  .more a {
+    float: center;
+    display: block;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .more a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /*Bas de page : saison*/
   #page > footer {
     grid-area: foot;
     background-color: #8cffa0;
+    font-weight: 300;
+    font-size: 25px;
   }
-  
+
+  #season {   
+    display: flex;
+    justify-content: flex-end;
+  }

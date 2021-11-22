@@ -1,0 +1,19 @@
+/* horloge2 */
+.clock {
+    background: #97007e;
+    width: 200px;
+    /*padding: 10px;*/
+    text-align: left end;
+    border-radius: 10px;
+  }
+  
+  .clock-time,
+  .clock-ampm {
+    font-size: 20px;
+    color: #eeeeee;
+  }
+  
+  .clock-time {
+    font-size: 35px;
+  }
+  
