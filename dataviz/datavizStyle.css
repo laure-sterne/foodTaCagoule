@@ -1,31 +1,40 @@
-/*style de toute la section du body*/
+/*style de toute la section page Accueil*/
+body{
+  font-family: 'Comfortaa', cursive;
+}
+
+/*tête de la page : type du plat & horloge*/
+header {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #8ca0ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 30px;
+  z-index: 3;
+}
+
 #page {
     display: grid;
     width: 100%;
-    height: 95vh;
-    grid-template-areas: "nav head"
-                         "nav  main"
-                         "nav  foot";
-    grid-template-rows: 50px 1fr 30px;
+    height: 99vh;
+    grid-template-areas:
+                         "main main"
+                         "foot  foot";
+    grid-template-rows: 1fr 60px;
     grid-template-columns: 150px 1fr;
-    font-family: 'Comfortaa', cursive;
-  }
-  
-  /*tête de la page : type du plat & horloge*/
-  #page > header {
-    grid-area: head;
-    background-color: #8ca0ff;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 400;
-    font-size: 20px;
+    scroll-snap-type: y mandatory;
   }
 
   /*horloge*/
   .clock {
     background: #97007e;
     width: 110px;
-    padding: 10px;
+    padding: 9px;
     text-align: center;
     border-radius: 10px;
   }
@@ -38,34 +47,25 @@
   .clockTime {
     font-size: 30px;
   }
-  
 
-  /*partie de gauche : menu*/
-  #page > nav {
-    grid-area: nav;
-    background-color: #ffa08c;
-    font-weight: 400;
-    font-size: 20px;
-  }
-
-  /*menu vers d'autres pages*/
+  /*menu animation*/
     #menuAccordeon {
     padding:0;
     margin:0;
     list-style:none;
     text-align: center;
-    width: 100%;
+    width: 120px;
+    font-weight: 400;
+    font-size: 20px;
     }
 
     #menuAccordeon ul {
     padding:0;
-    margin:0;
+    margin: 3px;
+    width: 100px;
     list-style:none;
     text-align: center;
-    }
-
-    #menuAccordeon li {
-     background-color:#729EBF;
+    position: fixed;
     }
 
     #menuAccordeon li li {
@@ -76,7 +76,7 @@
      background: #444;
      box-shadow: none;
      border:none;
-     margin:0
+     margin:0; 
     }
 
     #menuAccordeon a {
@@ -84,15 +84,11 @@
     text-decoration: none;
     color: #fff;
     padding: 8px 0;
-    font-size:1.2em
+    font-size:1.2em;
     }
 
     #menuAccordeon ul li a, #menuAccordeon li:hover li a {
-    font-size:1em
-    }
-
-    #menuAccordeon li:hover {
-     background: #729EBF
+    font-size:1em;
     }
 
     #menuAccordeon li li:hover {
@@ -100,12 +96,12 @@
     }
 
     #menuAccordeon ul li:last-child {
-     border-radius: 0 0 6px 6px;
+     border-radius: 0 0 3px 3px;
      border:none;
     }
     
     #menuAccordeon li:hover li {
-    max-height: 15em;
+    max-height: 10em;
     }
 
   /*page d'accueil : plat & en savoir plus*/
@@ -126,7 +122,7 @@
     66% { transform: rotate(10deg); }
   }
   
-  main:hover .repas {
+  main:hover .meal {
     animation: identifier 2000ms;
   }
 
@@ -147,7 +143,7 @@
   }
 
   .more a:hover {
-    background-color: #ddd;
+    background-color: rgb(199, 202, 15);
     color: black;
   }
 
@@ -157,9 +153,102 @@
     background-color: #8cffa0;
     font-weight: 300;
     font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #season {   
-    display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
   }
+
+  /*Bouton de rafraîchissement*/
+  :root {
+    --bg: #2023b9;
+    --color: rgb(159, 15, 172);
+  }
+
+  .wrapper {
+    padding: 0rem 0;
+    filter: url('#goo');
+  }
+
+  .button {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    padding: 1em 1em 1em;
+    line-height: 0.1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 5em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1 rem;
+  }
+
+  .button:before,
+  .button:after {
+    width: 3em;
+    height: 1.5em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: var(--color);
+    border-radius: 20%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+  }
+
+  .button:before {
+    top: -25%;
+    left: 20%;
+  }
+
+  .button:after {
+    bottom: -25%;
+    right: 20%;
+  }
+
+  .button:hover:before,
+  .button:hover:after {
+    transform: none;
+  }
+
+/*style de toute la section pageIngrédients*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "zebi2 zebi1 zebi1"
+    "zebi2 zebi1 zebi1"
+    "zebi2 zebi1 zebi1"
+    "zebi2 zebi1 zebi1"
+    "zebi3 zebi3 zebi3";
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.zebi3 { 
+  grid-area: zebi3; 
+  background-color: rgb(159, 15, 172);
+}
+
+.zebi1 { 
+  grid-area: zebi1; 
+  background-color: #8cffa0;
+}
+
+.zebi2 { 
+  grid-area: zebi2; 
+  background-color: #ffff64;
+}

@@ -7,43 +7,71 @@
     <title>Trouvez votre repas du jour !</title>
 </head>
 
-<body onload="startTime()">
-    <section id="page">
-        <header>
-            <div class="clock">
-                <span class="clockTime"></span>
-                <span class="clockAmpm"></span>
-            </div>
-            <div id="typeMeal"></div>
-        </header>
+<body>
 
-        <!-- insertion du code d'Amine à propos du menu déroulant-->
-        <nav>
-            <ul id="menuAccordeon">
-                 <li><a href="#">Menu</a>
-                   <ul>
-                      <li><a href="#">Magroze</a></li>
-                      <li><a href="#">Beat</a></li>
-                      <li><a href="#">Magroze</a></li>
-                      <li><a href="#">Beat</a></li>
-                   </ul>
-                </li>
-             </ul>
-        </nav>
+    <header>
+        <ul id="menuAccordeon">
+            <li><a href="#">Menu</a>
+              <ul>
+                 <li><a href="#">Magroze</a></li>
+                 <li><a href="#">Beat</a></li>
+                 <li><a href="#">Magroze</a></li>
+                 <li><a href="#">Beat</a></li>
+              </ul>
+           </li>
+        </ul>
+        <div class="clock" onload="startTime()">
+            <span class="clockTime"></span>
+            <span class="clockAmpm"></span>
+        </div>
+        <div id="typeMeal"></div>
+    </header>
+
+    <section id="page">
+        
+
 
         <main>
-            <p class="meal">magroze</p>
+            <p class="meal"></p>
             <img id="image"></img>
             <div class="more">
-                <a href="datavizPage2.html">coin coin</a>
+                <a href="#page2">coin coin</a>
             </div>
         </main>
 
         <footer>
+            <!-- Bouton de rafraîchissement -->
+            <div class="wrapper">
+                <a class="button" href="#">Magroze!</a>
+            </div>
+            
+            <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                    </filter>
+                </defs>
+            </svg>
+            
             <div id="season">Saison :</div>
         </footer>
-
     </section>
+
+
+    <section class="container" id="page2">
+        <div class="zebi3">
+            <p>uesh</p>
+        </div>
+        <div class="zebi1">
+            <p>ça va bien ?</p>
+        </div>
+        <div class="zebi2">
+            <p>oui et tua ?</p>
+        </div>
+    </section>
+
 
 <script type="text/javascript" src="datavizAnimation.js"></script>
 <script type="text/javascript" src="api.js"></script>

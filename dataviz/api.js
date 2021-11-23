@@ -1,7 +1,7 @@
 let mealTime = themessage;
 console.log(mealTime);
 
-let keyApi = 9c912ee869724c8789f0e70b9bd3c417
+let keyApi = "9c912ee869724c8789f0e70b9bd3c417";
 
 fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=0&query=${mealTime}&number=40&addRecipeInformation=true&image=true&fillIngredients=true`).then(function(result) {
   return result.json();
