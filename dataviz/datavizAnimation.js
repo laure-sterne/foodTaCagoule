@@ -18,8 +18,8 @@ class DigitalClock {
       const timeFormatted = `${parts.hour}:${minuteFormatted}`;
       const amPm = parts.isAm ? "AM" : "PM";
   
-      this.element.querySelector(".clock-time").textContent = timeFormatted;
-      this.element.querySelector(".clock-ampm").textContent = amPm;
+      this.element.querySelector(".clockTime").textContent = timeFormatted;
+      this.element.querySelector(".clockAmpm").textContent = amPm;
     }
   
     getTimeParts() {
@@ -42,11 +42,11 @@ class DigitalClock {
 // changement du type de repas selon l'heure
 var thehours = new Date().getHours();
 	var themessage;
-	var morning = ('Petit-déjeuner');
-    var midday = ('Déjeuner'); 
-	var afternoon = ('Goûter');
-	var evening = ('Dîner');
-    var night = ('En-cas de minuit');
+	var morning = ('Breakfast');
+  var midday = ('Lunch'); 
+	var afternoon = ('Snack');
+	var evening = ('Dinner');
+  var night = ('Appetizer');
 
 	if (thehours >= 6 && thehours < 11) {
 		themessage = morning; 
@@ -80,41 +80,3 @@ var thehours = new Date().getHours();
     //} 
 
     //document.getElementById('season').innerHTML = "Saison :" + season
-
-
-//API Fetch
-let getRecipe = document.getElementById('repas');
-
-fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-		"x-rapidapi-key": "42f52e0604mshb3d6c1be805c155p16d5cfjsnd69640cf5aa9"
-	}
-})
-//.then(response => {
-//	console.log(response);
-//  
-//})
-.then (function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  const objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-})
-.catch(err => {
-	console.error(err);
-});
-
-
-const myImage = document.querySelector('img');
-
-fetch('flowers.jpg')
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  const objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});

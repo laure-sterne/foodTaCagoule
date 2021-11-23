@@ -2,7 +2,7 @@
 #page {
     display: grid;
     width: 100%;
-    height: 710px;
+    height: 95vh;
     grid-template-areas: "nav head"
                          "nav  main"
                          "nav  foot";
@@ -30,12 +30,12 @@
     border-radius: 10px;
   }
   
-  .clock-time, .clock-ampm {
+  .clockTime, .clockAmpm {
     font-size: 20px;
     color: pink;
   }
   
-  .clock-time {
+  .clockTime {
     font-size: 30px;
   }
   
@@ -49,7 +49,7 @@
   }
 
   /*menu vers d'autres pages*/
-    #menu-accordeon {
+    #menuAccordeon {
     padding:0;
     margin:0;
     list-style:none;
@@ -57,18 +57,18 @@
     width: 100%;
     }
 
-    #menu-accordeon ul {
+    #menuAccordeon ul {
     padding:0;
     margin:0;
     list-style:none;
     text-align: center;
     }
 
-    #menu-accordeon li {
+    #menuAccordeon li {
      background-color:#729EBF;
     }
 
-    #menu-accordeon li li {
+    #menuAccordeon li li {
      max-height:0;
      overflow: hidden;
      transition: all .5s;
@@ -79,7 +79,7 @@
      margin:0
     }
 
-    #menu-accordeon a {
+    #menuAccordeon a {
     display:block;
     text-decoration: none;
     color: #fff;
@@ -87,24 +87,24 @@
     font-size:1.2em
     }
 
-    #menu-accordeon ul li a, #menu-accordeon li:hover li a {
+    #menuAccordeon ul li a, #menuAccordeon li:hover li a {
     font-size:1em
     }
 
-    #menu-accordeon li:hover {
+    #menuAccordeon li:hover {
      background: #729EBF
     }
 
-    #menu-accordeon li li:hover {
+    #menuAccordeon li li:hover {
      background: #999;
     }
 
-    #menu-accordeon ul li:last-child {
+    #menuAccordeon ul li:last-child {
      border-radius: 0 0 6px 6px;
      border:none;
     }
     
-    #menu-accordeon li:hover li {
+    #menuAccordeon li:hover li {
     max-height: 15em;
     }
 
