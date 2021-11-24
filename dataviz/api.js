@@ -1,12 +1,10 @@
 let mealTime = themessage;
-console.log(mealTime);
 
 let keyApi = "9c912ee869724c8789f0e70b9bd3c417";
 
-fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=0&query=${mealTime}&number=40&addRecipeInformation=true&image=true&fillIngredients=true`).then(function(result) {
+fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${keyApi}&query=${mealTime}&number=40&addRecipeInformation=true&image=true&fillIngredients=true`).then(function(result) {
   return result.json();
 }).then(function(json) {
-  console.log(json);
   displayResults(json);
 });
 
@@ -15,20 +13,38 @@ function randomTwenty() {
   return Math.floor(Math.random() * 40);
 }
 
-
 function displayResults(json) {
   const resultIndex = randomTwenty()
   let main = document.querySelector('main');
-
 
   const imgUrl = json.results[resultIndex].image;
   let imageAffichée = document.querySelector('img');
   imageAffichée.src=imgUrl;
 
   const titre = json.results[resultIndex].title;
-  let titreAffichée = document.querySelector('.meal');
-  titreAffichée.textContent= titre;
+  let titreAffiché = document.querySelector('.meal');
+  titreAffiché.textContent= titre;
+  let deuxièmeTitre = document.querySelector('#recipeName');
+  deuxièmeTitre.textContent = titre;
 
+  const ingredients = json.results[resultIndex].extendedIngredients;
+  let ingrédientsAffichés = document.querySelector('#ingrédients')
+  for (let i = 0 ; i < ingredients.length ; i++) {
+    let ingInList = `${ingredients[i].original}`;
+    let ingElement = document.createElement('li');
+    ingElement.textContent = ingInList;
+    ingrédientsAffichés.appendChild(ingElement);
+  } 
+
+  const recipeSteps = json.results[resultIndex].analyzedInstructions[0].steps;
+  let étapesAffichées = document.querySelector('#étapes');
+  for (let i = 0 ; i < recipeSteps.length ; i++) {
+    let stepInList = `${recipeSteps[i].step}`;
+    let stepElement = document.createElement('li');
+    stepElement.textContent = stepInList;
+    étapesAffichées.appendChild(stepElement);
+  
+  }
 
 }
 

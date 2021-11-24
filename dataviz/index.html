@@ -13,10 +13,8 @@
         <ul id="menuAccordeon">
             <li><a href="#">Menu</a>
               <ul>
-                 <li><a href="#">Magroze</a></li>
-                 <li><a href="#">Beat</a></li>
-                 <li><a href="#">Magroze</a></li>
-                 <li><a href="#">Beat</a></li>
+                 <li><a href="#">À propos</a></li>
+                 <li><a href="#">Sites affiliés</a></li>
               </ul>
            </li>
         </ul>
@@ -27,22 +25,20 @@
         <div id="typeMeal"></div>
     </header>
 
+<div class="scroll">
     <section id="page">
-        
-
-
         <main>
             <p class="meal"></p>
             <img id="image"></img>
             <div class="more">
-                <a href="#page2">coin coin</a>
+                <a href="#page2">Connaître la recette</a>
             </div>
         </main>
 
         <footer>
             <!-- Bouton de rafraîchissement -->
             <div class="wrapper">
-                <a class="button" href="#">Magroze!</a>
+                <a class="button" href="datavizAccueil.html">D'autres recettes ?</a>
             </div>
             
             <!-- Filter: https://css-tricks.com/gooey-effect/ -->
@@ -55,23 +51,26 @@
                 </defs>
             </svg>
             
-            <div id="season">Saison :</div>
+            <div><p id="season">Saison en France :<p></div>
         </footer>
     </section>
 
 
     <section class="container" id="page2">
-        <div class="zebi3">
-            <p>uesh</p>
-        </div>
         <div class="zebi1">
-            <p>ça va bien ?</p>
+            <ol id="étapes"></ol>
         </div>
         <div class="zebi2">
-            <p>oui et tua ?</p>
+            <h1 id="recipeName"></h1>
+            <ul id="ingrédients"></ul>
+        </div>
+        <div class="zebi3">
+            <div class="more">
+                <a href="#page">Revenir en haut</a>
+            </div>
         </div>
     </section>
-
+</div>
 
 <script type="text/javascript" src="datavizAnimation.js"></script>
 <script type="text/javascript" src="api.js"></script>

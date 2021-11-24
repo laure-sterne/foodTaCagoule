@@ -66,17 +66,20 @@ var thehours = new Date().getHours();
 
 	document.getElementById('typeMeal').append(themessage);
 
-// changement saison selon la date
-//var day = new Date().getDate
-   //var season;
-   //var
-    
-    //if (myNum <= 15){
-      
-    //} else if {
-      
-    //} else if {
-        
-    //} 
 
-    //document.getElementById('season').innerHTML = "Saison :" + season
+const month = new Date().getMonth();
+let season = "";
+
+if (month < 3) {
+  season = "Winter";
+} else if (month < 6) {
+  season = "Spring";
+} else if (month < 9) {
+  season = "Summer";
+} else if (month < 12) {
+  season = "Fall";
+} else {
+  season = "Hmmm";
+}
+
+document.querySelector('#season').textContent = season;

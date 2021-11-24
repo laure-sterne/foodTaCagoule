@@ -1,6 +1,16 @@
 /*style de toute la section page Accueil*/
 body{
   font-family: 'Comfortaa', cursive;
+  background-color: forestgreen;
+  color: pink;
+}
+
+.scroll {
+  scroll-snap-type: y mandatory;
+}
+
+section{
+  scroll-snap-align: start;
 }
 
 /*tête de la page : type du plat & horloge*/
@@ -8,8 +18,8 @@ header {
   position: -webkit-sticky;
   position: fixed;
   top: 0px;
-  width: 100%;
-  background-color: #8ca0ff;
+  width: 98vw;
+  background-color: #B74C6E;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,8 +42,8 @@ header {
 
   /*horloge*/
   .clock {
-    background: #97007e;
-    width: 110px;
+    background: #B74C6E;
+    width: 130px;
     padding: 9px;
     text-align: center;
     border-radius: 10px;
@@ -50,19 +60,21 @@ header {
 
   /*menu animation*/
     #menuAccordeon {
-    padding:0;
+    padding:5px;
     margin:0;
     list-style:none;
     text-align: center;
     width: 120px;
     font-weight: 400;
     font-size: 20px;
+    background-color: #B74C6E;
+    border-radius: 10px;
     }
 
     #menuAccordeon ul {
     padding:0;
-    margin: 3px;
-    width: 100px;
+    margin: 5px;
+    width: 110px;
     list-style:none;
     text-align: center;
     position: fixed;
@@ -73,7 +85,7 @@ header {
      overflow: hidden;
      transition: all .5s;
      border-radius:0;
-     background: #444;
+     background: #db5d85;
      box-shadow: none;
      border:none;
      margin:0; 
@@ -82,7 +94,7 @@ header {
     #menuAccordeon a {
     display:block;
     text-decoration: none;
-    color: #fff;
+    color: pink;
     padding: 8px 0;
     font-size:1.2em;
     }
@@ -92,7 +104,7 @@ header {
     }
 
     #menuAccordeon li li:hover {
-     background: #999;
+     background: #f57ba1;
     }
 
     #menuAccordeon ul li:last-child {
@@ -107,7 +119,6 @@ header {
   /*page d'accueil : plat & en savoir plus*/
   #page > main {
     grid-area: main;
-    background-color: #ffff64;
     font-weight: 700;
     font-size: 40px;
     display: flex;
@@ -126,16 +137,21 @@ header {
     animation: identifier 2000ms;
   }
 
+  .meal {
+    padding-right: 10px;
+  }
+
 
   /*bouton vers la page 2*/
   .more {
-    background-color: #333;
+    background-color: #B74C6E;
+    border-radius: 1em;
   }
   
   .more a {
     float: center;
     display: block;
-    color: #F2F2F2;
+    color: pink;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -143,20 +159,22 @@ header {
   }
 
   .more a:hover {
-    background-color: rgb(199, 202, 15);
-    color: black;
+    background-color: pink;
+    color: #B74C6E;
+    border-radius: 1em;
   }
 
   /*Bas de page : saison*/
   #page > footer {
     grid-area: foot;
-    background-color: #8cffa0;
     font-weight: 300;
     font-size: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    scroll-snap-align: end;
+    scroll-snap-stop: normal;
   }
 
   #season {   
@@ -166,8 +184,8 @@ header {
 
   /*Bouton de rafraîchissement*/
   :root {
-    --bg: #2023b9;
-    --color: rgb(159, 15, 172);
+    --bg: pink;
+    --color: #B74C6E;
   }
 
   .wrapper {
@@ -186,7 +204,6 @@ header {
     position: relative;
     min-width: 5em;
     text-decoration: none;
-    font-family: var(--font);
     font-size: 1 rem;
   }
 
@@ -223,7 +240,7 @@ header {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 50px;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -235,20 +252,34 @@ header {
     "zebi3 zebi3 zebi3";
   width: 100%;
   height: 100vh;
-  scroll-snap-type: y mandatory;
-}
-
-.zebi3 { 
-  grid-area: zebi3; 
-  background-color: rgb(159, 15, 172);
 }
 
 .zebi1 { 
   grid-area: zebi1; 
-  background-color: #8cffa0;
+  border: 1px;
+  border-color: hotpink;
+  margin-top: 80px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+#étapes li, #ingrédients li {
+  padding: 10px;
 }
 
 .zebi2 { 
   grid-area: zebi2; 
-  background-color: #ffff64;
+  margin: 80px 0px 20px 10px;
+  border-radius: 10px;
+  background-color: pink;
+  color: purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.zebi3 { 
+  grid-area: zebi3; 
 }
