@@ -15,7 +15,6 @@ function randomTwenty() {
 
 function displayResults(json) {
   const resultIndex = randomTwenty()
-  let main = document.querySelector('main');
 
   const imgUrl = json.results[resultIndex].image;
   let imageAffichée = document.querySelector('img');

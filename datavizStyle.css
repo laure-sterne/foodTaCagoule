@@ -114,7 +114,7 @@ header {
     }
 
   /*page d'accueil : plat & en savoir plus*/
-  #page > main {
+  #page > #main {
     grid-area: main;
     font-weight: 700;
     font-size: 40px;
@@ -130,7 +130,7 @@ header {
     66% { transform: rotate(10deg); }
   }
   
-  main:hover .meal {
+  #main:hover .meal {
     animation: identifier 2000ms;
   }
 
