@@ -1,6 +1,6 @@
 let mealTime = themessage;
 
-let keyApi = "f96f134970ce483886a73b76e0689bf1"; // Amineuh: "9c912ee869724c8789f0e70b9bd3c417" or Constanteuh: "ed6c1ac8561d4ff8a0c8969668d448a6"
+let keyApi = "ed6c1ac8561d4ff8a0c8969668d448a6"; // Laureuh: "f96f134970ce483886a73b76e0689bf1" or Amineuh: "9c912ee869724c8789f0e70b9bd3c417"
 
 fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${keyApi}&query=${mealTime}&number=40&addRecipeInformation=true&image=true&fillIngredients=true`).then(function(result) {
   return result.json();
