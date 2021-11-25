@@ -29,7 +29,10 @@ header {
                          "foot  foot";
     grid-template-rows: 1fr 60px;
     grid-template-columns: 150px 1fr;
-    scroll-snap-type: y mandatory;
+  }
+
+  h2 {
+    font-size: 40px;
   }
 
   #typeMeal {
@@ -144,6 +147,7 @@ header {
   .more {
     background-color: #B74C6E;
     border-radius: 1em;
+    margin-top: 20px;
   }
   
   .more a {
@@ -260,6 +264,7 @@ header {
   padding: 40px;
   display: flex;
   justify-content: center;
+  overflow: auto;
 }
 
 #étapes li, #ingrédients li {
@@ -269,14 +274,19 @@ header {
 .zebi2 { 
   grid-area: zebi2; 
   margin: 80px 0px 20px 5px;
-  padding: 20px 0 0 20px;
+  padding: 20px 20px 0 20px;
   border-radius: 10px;
   background-color: pink;
   color: purple;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.zebi1::-webkit-scrollbar, .zebi2::-webkit-scrollbar {
+  display: none;
 }
 
 #recipeName {
