@@ -151,7 +151,7 @@ header {
   }
   
   .more a {
-    float: center;
+    justify-content: center;
     display: block;
     color: pink;
     text-align: center;
@@ -206,7 +206,7 @@ header {
     position: relative;
     min-width: 5em;
     text-decoration: none;
-    font-size: 1 rem;
+    font-size: 1.5rem;
   }
 
   .button:before,
