@@ -9,7 +9,7 @@ This collective project is about a website which purpose some recipes according 
 ## How to use the project
 
 To use the project
-- You can obtain the recipe of your day, you can click [here](https://laure-sterne.github.io/foodtacagoule-teamgsz/) 🍲
+- You can obtain the recipe of your day, you can click [here](https://laure-sterne.github.io/foodTaCagoule/) 🍲
     
 ## Documentation
 
@@ -44,9 +44,10 @@ It was on this project that I understood the importance of push and versioning w
 
 Here are some other projects realized during [Ada Tech School](https://adatechschool.fr/)
 
-  👾 [George's Halloween](https://github.com/laure-sterne/video-game-george-halloween) : an escape room video game where George must escape from a mansion with multiple coins and traps.
+  👾 [George's Halloween](https://github.com/laure-sterne/georgesHalloween) : an escape room video game where George must escape from a mansion with multiple coins and traps.
 
-  🦔 [Extension navigateur de talents](https://github.com/laure-sterne/extention-navigateur-de-talents-i-m-l) : a chrome extension which tends to make the web accessible to color blind people.
+  🦔 [Extension navigateur de talents](https://github.com/laure-sterne/extentionNavigateurDeTalents) : a chrome extension which tends to make the web accessible to color blind people.
 
-  🌈 [Petits hérissons pipous](https://github.com/laure-sterne/social-network-php-petit-herisson-pipou) : a social network whose mascot is a hedgehog. 
+  🌈 [Petit hérisson pipou](https://github.com/laure-sterne/socialNetworkPetitHerissonPipou) : a social network whose mascot is a hedgehog. 
+
 
