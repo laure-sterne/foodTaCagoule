@@ -1,6 +1,6 @@
 # Food Ta Cagoule
 
-This collective projet is about a website which purpose some recipes according to moment of the day. ☀
+This collective project is about a website which purpose some recipes according to moment of the day. ☀
 
 ## Tech Stack
 
