@@ -46,8 +46,8 @@ Here are some other projects realized during [Ada Tech School](https://adatechsc
 
   👾 [George's Halloween](https://github.com/laure-sterne/georgesHalloween) : an escape room video game where George must escape from a mansion with multiple coins and traps.
 
-  🌈 [Extension navigateur de talents](https://github.com/laure-sterne/extentionNavigateurDeTalents) : a chrome extension which tends to make the web accessible to color blind people.
+  🌈 [Extension navigateur de talents](https://github.com/laure-sterne/seeMore) : a chrome extension which tends to make the web accessible to color blind people.
 
-  🦔 [Petit Hérisson Pipou](https://github.com/laure-sterne/socialNetworkPetitHerissonPipou) : a social network whose mascot is a hedgehog. 
+  🦔 [Petit Hérisson Pipou](https://github.com/laure-sterne/petitHerissonPipou) : a social network whose mascot is a hedgehog. 
 
 
