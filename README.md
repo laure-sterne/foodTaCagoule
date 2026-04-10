@@ -9,28 +9,31 @@ This collective project is about a website which purpose some recipes according 
 ## How to use the project
 
 To use the project
-- You can obtain the recipe of your day, you can click [here](https://laure-sterne.github.io/foodTaCagoule/) 🍲
-    
+
+- You can obtain the recipe of your day, you can [visit the website](https://laure-sterne.github.io/foodTaCagoule/) 🍲
+
 ## Documentation
 
 To understand what is an API
-- [Introduction to web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) 
+
+- [Introduction to web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+
 - [Fetching data from server](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 
 How to use the project's API
+
 - [Spoonacular API](https://spoonacular.com/food-api/docs)
 
 ## Authors ✨
 
->  [![constantGuilbert](https://img.shields.io/badge/constant_guilbert-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Astating)
-> [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/constant-guilbert/)
+[![constantGuilbert](https://img.shields.io/badge/constant_guilbert-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Astating)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/constant-guilbert/)
 
-> [![aminezniber](https://img.shields.io/badge/amine_zniber-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zniberfr)
-> [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amine-zniber-896908231/)
+[![aminezniber](https://img.shields.io/badge/amine_zniber-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zniberfr)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amine-zniber-896908231/)
 
-> [![laure-sterne](https://img.shields.io/badge/laure_sterne-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/laure-sterne)
-> [![portfolio](https://img.shields.io/badge/portfolio-26C200?style=for-the-badge&logo=ko-fi&logoColor=white)]()
-> [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laure-sterne-3729a5144/)
+[![laure-sterne](https://img.shields.io/badge/laure_sterne-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/laure-sterne)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laure-sterne/)
 
 ## Lessons Learned
 
@@ -44,10 +47,8 @@ It was on this project that I understood the importance of push and versioning w
 
 Here are some other projects realized during [Ada Tech School](https://adatechschool.fr/)
 
-  👾 [George's Halloween](https://github.com/laure-sterne/georgesHalloween) : an escape room video game where George must escape from a mansion with multiple coins and traps.
+👾 [George's Halloween](https://github.com/laure-sterne/georgesHalloween) : an escape room video game where George must escape from a mansion with multiple coins and traps.
 
-  🌈 [See More](https://github.com/laure-sterne/seeMore) : a chrome extension which tends to make the web accessible to color blind people.
+🌈 [See More](https://github.com/laure-sterne/seeMore) : a chrome extension which tends to make the web accessible to color blind people.
 
-  🦔 [Petit Hérisson Pipou](https://github.com/laure-sterne/petitHerissonPipou) : a social network whose mascot is a hedgehog. 
-
-
+🦔 [Petit Hérisson Pipou](https://github.com/laure-sterne/petitHerissonPipou) : a social network whose mascot is a hedgehog.
