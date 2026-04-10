@@ -1,4 +1,3 @@
-//horloge
 class DigitalClock {
     constructor(element) {
       this.element = element;
@@ -18,8 +17,7 @@ class DigitalClock {
       const timeFormatted = `${parts.hour}:${minuteFormatted}`;
       const amPm = parts.isAm ? "AM" : "PM";
   
-      this.element.querySelector(".clockTime").textContent = timeFormatted;
-      this.element.querySelector(".clockAmpm").textContent = amPm;
+      clockElement.textContent = timeFormatted + " " + amPm;
     }
   
     getTimeParts() {
@@ -31,55 +29,54 @@ class DigitalClock {
         isAm: now.getHours() < 12
       };
     }
-  }
+}
   
-  const clockElement = document.querySelector(".clock");
-  const clockObject = new DigitalClock(clockElement);
-  
-  clockObject.start();
-  
+const clockElement = document.querySelector(".menu__clock");
+const clockObject = new DigitalClock(clockElement);
 
-// changement du type de repas selon l'heure
-var thehours = new Date().getHours();
-	var themessage;
-	var morning = ('Breakfast');
-  var midday = ('Lunch'); 
-	var afternoon = ('Snack');
-	var evening = ('Dinner');
-  var night = ('Appetizer');
+clockObject.start();
 
-	if (thehours >= 6 && thehours < 11) {
-		themessage = morning; 
+let thehours = new Date().getHours();
+let mealTime = "What meal is it again?";
+if (thehours >= 6 && thehours < 11) {
+  mealTime = 'Breakfast';
+} else if (thehours >= 11 && thehours < 14) {
+	mealTime = 'Lunch';
+} else if (thehours >= 14 && thehours < 18) {
+  mealTime = 'Snack';   
+} else if (thehours >= 18 && thehours < 24) {
+	mealTime = 'Dinner';
+} else if (thehours >= 24 && thehours < 6) {
+  mealTime = 'Appetizer';
+}
 
-	} else if (thehours >= 11 && thehours < 14) {
-		themessage = midday;
-
-    } else if (thehours >= 14 && thehours < 18) {
-        themessage = afternoon
-
-	} else if (thehours >= 18 && thehours < 24) {
-		themessage = evening;
-
-	} else if (thehours >=24 && thehours < 6) {
-        themessage = night;
-    }
-
-	document.getElementById('typeMeal').append(themessage);
+document.querySelector('.menu__meal').append(mealTime);
 
 
 const month = new Date().getMonth();
-let season = "";
+let season = "What season is it again?";
 
-if (month < 3) {
-  season = "Winter";
-} else if (month < 6) {
-  season = "Spring";
-} else if (month < 9) {
-  season = "Summer";
-} else if (month < 12) {
-  season = "Fall";
-} else {
-  season = "Hmmm";
+switch (month) {
+  case 0:
+  case 1:
+  case 2:
+    season = "Winter";
+    break;
+  case 3:
+  case 4:
+  case 5:
+    season = "Spring";
+    break;
+  case 6:
+  case 7:
+  case 8:
+    season = "Summer";
+    break;
+  case 9:
+  case 10:
+  case 11:
+    season = "Fall";
+    break;
 }
 
-document.querySelector('#season').textContent = season;
+document.querySelector('.season').append(season);

@@ -1,0 +1,64 @@
+:root {
+  /* Colors */
+  --color-primary: #DB5D85;
+  --color-secondary: #5DDBB3;
+  --color-background: #f1f0f1;
+  --color-text: #262223;
+
+  /* Font families */
+  --font-family-title: 'Caveat', cursive;
+  --font-family-texte: 'Libre Baskerville', serif;
+
+  /* Font sizes */
+  --font-size-title: 4rem;
+  --font-size-text: 1.05rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title);
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+  background-color: var(--color-primary);
+  font-style: var(--color-text);
+  z-index: 3;
+}
+
+body {
+  background-color: var(--color-background);
+  font-style: var(--color-text);
+  font-size: var(--font-size-text);
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--color-primary);
+  border-radius: 1.75em;
+  padding: 1rem;
+  margin: 1rem;
+
+  &:hover {
+    background-color: var(--color-secondary);
+  }
+}

@@ -1,80 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <!-- Project by Amine ZNIBER, Constant GUILBERT and Laure STERNE -->
-    <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="datavizStyle.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Trouvez votre repas du jour !</title>
-</head>
-
-<body>
+    <head>
+        <!-- Project by Amine ZNIBER, Constant GUILBERT and Laure STERNE -->
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="datavizStyle.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <title>Find Your Meal!</title>
+    </head>
 
     <header>
-        <ul id="menuAccordeon">
-            <li><a href="#">Menu</a>
-              <ul>
-                 <li><a href="#">À propos</a></li>
-                 <li><a href="#">Sites affiliés</a></li>
-              </ul>
-           </li>
-        </ul>
-        <div class="clock" onload="startTime()">
-            <span class="clockTime"></span>
-            <span class="clockAmpm"></span>
+        <div class="menu">
+            <div class="menu__title">Menu</div>
+            <div class="menu__dropdown">
+                <a href="https://github.com/laure-sterne/foodTaCagoule/tree/master" target="_blank">Github</a>
+                <a href="https://github.com/adatechschool/projet-collectif---dataviz-teamgsz" target="_blank">Original Project</a>
+            </div>
         </div>
-        <div id="typeMeal"></div>
+        <div class="menu__clock" onload="startTime()"></div>
+        <div class="menu__meal"></div>
     </header>
 
-    <section id="page">
-        <div id="main">
-            <h2 class="meal"></h2>
-            <img id="image" width="400px">
-            <div class="more">
-                <a href="#page2">Connaître la recette</a>
+    <body>
+        <section class="meal">
+            <div class="mealOfTheDay">
+                <h1 class="meal__title">Meal of the Day</h1>
+                <img alt="meal of the moment which is interesting for sure!" width="400px">
+                <a class="button meal__button" href="#recipe">See the recipe!</a>
             </div>
-        </div>
 
-        <footer>
-            <!-- Bouton de rafraîchissement -->
-            <div class="wrapper">
-                <a class="button" href="index.html">D'autres recettes ?</a>
-            </div>
-            
-            <!-- Filter: https://css-tricks.com/gooey-effect/ -->
-            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <defs>
-                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>    
-                        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                    </filter>
-                </defs>
-            </svg>
-            
-            <div><p id="season">Saison en France :<p></div>
-        </footer>
-    </section>
-
-
-    <section class="container" id="page2">
-        <div class="zebi1">
-            <ol id="étapes"></ol>
-        </div>
-
-        <div class="zebi2">
-            <h1 id="recipeName"></h1>
-            <ul id="ingrédients"></ul>
-        </div>
+            <footer>
+                <a class="button button__refresh" href="index.html">Other ideas?</a>
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter class="goofy"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>    
+                            <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goofy" />
+                            <feComposite in="SourceGraphic" in2="goofy" operator="atop"/>
+                        </filter>
+                    </defs>
+                </svg>
+                <div class="season"></div>
+            </footer>
+        </section>
         
-        <div class="zebi3">
-            <div class="more">
-                <a href="#page">Revenir en haut</a>
+        <section class="recipe" id="recipe">
+            <div class="recipe__ingredients">
+                <h2 class="ingredients__title">Ingredients</h2>
+                <ul class="ingredients__text"></ul>
             </div>
-        </div>
-    </section>
+            <div class="recipe__details">
+                <h2 class="details__title">Steps</h2>
+                <ul class="details__text"></ul>
+            </div>
+            <div class="test">
+                <a class="button button__top" href="#top">Return to the top</a>
+            </div>
+        </section>
 
-<script type="text/javascript" src="datavizAnimation.js"></script>
-<script type="text/javascript" src="api.js"></script>
-</body>
+        <script type="text/javascript" src="datavizAnimation.js"></script>
+        <script type="text/javascript" src="api.js"></script>
+    </body>
 
 </html>
