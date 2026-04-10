@@ -13,4 +13,4 @@ jobs:
 
       - name: Inject API key
         run: |
-          sed -i 's|__API_KEY__|${{ secrets.API_KEY }}|g' api.js
+          sed -i "s|__API_KEY__|${{ secrets.API_KEY }}|g" api.js
