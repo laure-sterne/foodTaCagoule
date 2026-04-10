@@ -11,6 +11,7 @@
 
   /* Font sizes */
   --font-size-title: 4rem;
+  --font-size-subtitle: 2.5rem;
   --font-size-text: 1.05rem;
 }
 
@@ -19,9 +20,14 @@ html, body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
+}
+
+h2 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-subtitle);
 }
 
 header {
